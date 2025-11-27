@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limpus Company</title>
-    <link rel="stylesheet" th:href="@{/style.css}">
-    
-    
+    <link rel="stylesheet" src="./static/css/style.css" th:href="@{/css/style.css}">
+
 </head>
 
     <body>
@@ -20,12 +19,12 @@
             <b class="titulo">Limpus Company<img id="imagemZika" src="../../static/img/logo.png"></b>
             <div class="titulo2">Chat Cleaner</div>
 
-        <div class="caixa">
+            <div class="caixa">
 
-            <input id="censura" placeholder="🤘">
-            <button id="enviar">Enviar</button>
+                <input id="censura" placeholder="🤘">
+                <button id="enviar">Enviar</button>
 
-        </div>
+            </div>
             <div class="caixa">
 
                 <textarea readonly class="chatS" name="Chat Insano" id="chat" rows="25" cols="50"></textarea>
@@ -36,40 +35,7 @@
             <footer>Copyright © 2025  - Todos os direitos Reservados - Limpus Company 🤘</footer>
         </div>
 
+        <script src="./static/js/script.js" th:src="@{/js/script.js}"></script>
     </body>
-<script>
-    const ima = document.getElementById("imagemZika")
-        const btn = document.getElementById("enviar")
-        const msg = document.getElementById("censura")
-        const chat = document.getElementById("chat")
-
-        btn.addEventListener('click',()=>{
-            const texto = msg.value
-            const agora = new Date()
-
-            const horas = agora.getHours().toString().padStart(2, '0')
-            const minutos = agora.getMinutes().toString().padStart(2, '0')
-
-            const msgFull = `[${horas}: ${minutos}]\n User: ${texto}`
-
-            chat.value += msgFull + "\n\n"
-            msg.value = ""
-
-        })
-
-        ima.addEventListener('mouseover',()=>{
-            const eas = document.getElementById("easter")
-            eas.classList.add("easterEggShow")
-            console.log(`aparecendo`)
-        })
-        ima.addEventListener('mouseout', ()=>{
-            const eas = document.getElementById("easter")
-            eas.classList.remove("easterEggShow")
-            console.log("saindo")
-        })
-
-
-</script>
-
 
 </html>
