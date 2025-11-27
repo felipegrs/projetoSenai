@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS palavroes;
+USE palavroes;
+
+CREATE TABLE palavras_proibidas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    palavra VARCHAR(100) NOT NULL UNIQUE
+);

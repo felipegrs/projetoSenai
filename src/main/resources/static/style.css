@@ -1,0 +1,150 @@
+:root{
+    /*Paleta de Cores*/
+    --corPrincipal:#580e0e;
+    --corBase:#360d0d;
+    --corSecundaria:#caa500;
+    --corTerciaria:#000000;
+    --corExtra:#a38557e8;
+    --corExtraPlus:#7c6036;
+    /*🤘*/
+}
+
+@keyframes grande{
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background: radial-gradient(var(--corBase) 50%, var(--corPrincipal));
+    margin: 5px;
+    box-sizing: border-box;
+    min-height: 98vh;
+    border: 2px solid var(--corTerciaria);
+    border-radius: 15px;
+    padding: 5px;
+    background-attachment: fixed;
+    color: var(--corSecundaria);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 5px 5px 8px black;
+}
+
+textarea{
+    border-radius: 5px;
+    outline: none;
+    background:var(--corExtra);
+}
+
+textarea:hover{
+    cursor: default;
+}
+
+b{
+    margin: 0;
+    padding: 0;
+}
+
+b img{
+    width: 75px;
+    height: auto;
+}
+
+input{
+    background: var(--corExtra);
+    color:var(--corTerciaria);
+    border-radius: 25px;
+    border: 1px solid var(--corTerciaria);
+    max-height: 1vh;
+    padding: 6px;
+}
+
+input:focus{
+    outline: 1px solid var(--corSecundaria)
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--corTerciaria);
+    color: var(--corTerciaria);
+    background:var(--corExtra);
+    max-height: 2.6vh;
+    min-width: 5vh;
+    transition: ease-out .2s;
+}
+
+button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    background:var(--corExtraPlus);
+}
+
+footer{
+    margin-top: 125px;
+}
+
+.pai{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 97vh;
+    min-height: 30vh;
+    min-width: 25vw;
+}
+
+.titulo{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    padding: 2px;
+    margin: 0;
+}
+
+.titulo2{
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+.caixa{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 15px;
+    border:2px solid var(--corTerciaria);
+    max-width: fit-content;
+    gap: 10px;
+}
+
+.chatS{
+    resize: none;
+}
+
+.easterEgg {
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000000000;
+    user-select: none;
+    -webkit-user-drag: none;
+    opacity: 0.001;
+    transition:all 60s;
+}
+
+.easterEggShow{
+    opacity: 0.1;
+}

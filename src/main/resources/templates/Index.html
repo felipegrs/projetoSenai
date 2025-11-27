@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--🤘🤘🤘-->
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpus Company</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+    
+    
+</head>
+
+    <body>
+        <img id="easter" class="easterEgg" src="../../static/img/ntanko.png">
+
+
+        <div class="pai">
+
+            <b class="titulo">Limpus Company<img id="imagemZika" src="../../static/img/logo.png"></b>
+            <div class="titulo2">Chat Cleaner</div>
+
+        <div class="caixa">
+
+            <input id="censura" placeholder="🤘">
+            <button id="enviar">Enviar</button>
+
+        </div>
+            <div class="caixa">
+
+                <textarea readonly class="chatS" name="Chat Insano" id="chat" rows="25" cols="50"></textarea>
+
+            </div>
+            <img src="../../static/img/cooltext496823960962091.gif">
+
+            <footer>Copyright © 2025  - Todos os direitos Reservados - Limpus Company 🤘</footer>
+        </div>
+
+    </body>
+<script>
+    const ima = document.getElementById("imagemZika")
+        const btn = document.getElementById("enviar")
+        const msg = document.getElementById("censura")
+        const chat = document.getElementById("chat")
+
+        btn.addEventListener('click',()=>{
+            const texto = msg.value
+            const agora = new Date()
+
+            const horas = agora.getHours().toString().padStart(2, '0')
+            const minutos = agora.getMinutes().toString().padStart(2, '0')
+
+            const msgFull = `[${horas}: ${minutos}]\n User: ${texto}`
+
+            chat.value += msgFull + "\n\n"
+            msg.value = ""
+
+        })
+
+        ima.addEventListener('mouseover',()=>{
+            const eas = document.getElementById("easter")
+            eas.classList.add("easterEggShow")
+            console.log(`aparecendo`)
+        })
+        ima.addEventListener('mouseout', ()=>{
+            const eas = document.getElementById("easter")
+            eas.classList.remove("easterEggShow")
+            console.log("saindo")
+        })
+
+
+</script>
+
+
+</html>
