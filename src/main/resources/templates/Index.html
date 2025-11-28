@@ -11,26 +11,26 @@
 </head>
 
     <body>
-        <img id="easter" class="easterEgg" th:src="@{/img/ntanko.png}">
+        <img alt="secreto" id="easter" class="easterEgg" th:src="@{/img/ntanko.png}">
 
 
         <div class="pai">
 
-            <b class="titulo">Limpus Company<img id="imagemZika" th:src="@{/img/logo.png}"></b>
+            <b class="titulo">Limpus Company<img alt="logo" id="imagemZika" th:src="@{/img/logo.png}"></b>
             <div class="titulo2">Chat Cleaner</div>
 
             <div class="caixa">
 
-                <input id="censura" placeholder="🤘">
+                <input id="censura" placeholder="🤘" aria-label="Chat" >
                 <button id="enviar">Enviar</button>
 
             </div>
             <div class="caixa">
 
-                <textarea readonly class="chatS" name="Chat Insano" id="chat" rows="25" cols="50"></textarea>
+                <textarea aria-label="" readonly class="chatS" name="Chat Insano" id="chat" rows="25" cols="50"></textarea>
 
             </div>
-            <img th:src="@{/img/irado.gif}">
+            <img alt="" th:src="@{/img/irado.gif}">
 
             <footer>Copyright © 2025  - Todos os direitos Reservados - Limpus Company 🤘</footer>
         </div>
