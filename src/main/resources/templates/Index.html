@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limpus Company</title>
-    <link rel="stylesheet" src="./static/css/style.css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 
 </head>
 
@@ -16,7 +16,7 @@
 
         <div class="pai">
 
-            <b class="titulo">Limpus Company<img id="imagemZika" src="../../static/img/logo.png"></b>
+            <b class="titulo">Limpus Company<img id="imagemZika" th:src="@{/img/logo.png}"></b>
             <div class="titulo2">Chat Cleaner</div>
 
             <div class="caixa">
@@ -30,12 +30,12 @@
                 <textarea readonly class="chatS" name="Chat Insano" id="chat" rows="25" cols="50"></textarea>
 
             </div>
-            <img src="../../static/img/cooltext496823960962091.gif">
+            <img th:src="@{/img/irado.gif}">
 
             <footer>Copyright © 2025  - Todos os direitos Reservados - Limpus Company 🤘</footer>
         </div>
 
-        <script src="./static/js/script.js" th:src="@{/js/script.js}"></script>
+        <script th:src="@{/js/script.js}"></script>
     </body>
 
 </html>
