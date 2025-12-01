@@ -2,7 +2,7 @@
         const btn = document.getElementById("enviar")
         const msg = document.getElementById("censura")
         const chat = document.getElementById("chat")
-
+//compra shawarma
         btn.addEventListener('click',()=>{
             const texto = msg.value
             const agora = new Date()
