@@ -6,7 +6,7 @@
  let palavroesDoBanco = [];
 
  // 1️⃣ Buscar palavrões do banco ao iniciar
- fetch("http://localhost:8080/api/palavrões")
+ fetch("http://localhost:8080/api/palavroes")
      .then(res => res.json())
      .then(data => {
          palavroesDoBanco = data.map(item => item.feia.toLowerCase());
@@ -35,7 +35,6 @@
      chat.value += msgFull + "\n\n";
      msg.value = "";
  });
-
 
  ima.addEventListener('mouseover',()=>{
      const eas = document.getElementById("easter")
