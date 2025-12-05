@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_insano
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: palavroes
+      MYSQL_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - insano_net
+
+  app:
+    build: .
+    container_name: sistema_insano
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/palavroes
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123
+    depends_on:
+      - mysql
+    networks:
+      - insano_net
+
+networks:
+  insano_net:
+
+volumes:
+  mysql_data:
